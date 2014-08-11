@@ -36,6 +36,9 @@ module My97FormBuilder
                            var options;
                            options = {
                             dateFmt: 'yyyy-MM-dd',
+                          　firstDayOfWeek: 1,
+                            disabledDays:[5,6],
+                            maxDate:'%y-%M-%d',
                             autoPickDate: null
                                      };
                               return WdatePicker($.extend(options, $(this).data()));
@@ -64,7 +67,7 @@ module My97FormBuilder
              javascript = options[:javascript] ||
                  "
               <script>
-                $(function() { 
+                $(function() {
                   var el = $('##{id}');
                   var currentValue = el.val();
                   if(currentValue.trim() == '') return;
@@ -129,7 +132,7 @@ module My97FormBuilder
              javascript = options[:javascript] ||
                      "
                   <script>
-                    $(function() { 
+                    $(function() {
                       var el = $('##{id}');
                       var currentValue = el.val();
                       if(currentValue.trim() == '') return;
