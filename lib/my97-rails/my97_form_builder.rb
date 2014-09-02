@@ -21,7 +21,7 @@ module My97FormBuilder
          end
          def my97_date_select(field,options ={})
              id = get_object_id(field, options)
-            options[:class]="Wdate"
+            options[:class] ||="Wdate"
              date =
                  if options['start_date']
                      options['start_date']
