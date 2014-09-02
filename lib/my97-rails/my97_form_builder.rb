@@ -75,15 +75,15 @@ module My97FormBuilder
                 });
               </script>"
               ("<div class='#{wrapperClass}'>" +
-               labelTag +
-               "<div class='controls'>" +
+               #labelTag +
+               #"<div class='controls'>" +
                text_field(field, {
                   :id => id, :placeholder => placeholder_text, :value => date.to_s,
                   :class => options[:class]
               }.merge(options[:text_field] || {})) +
                   errorSpan +
                   javascript +
-                  "</div>" +
+                #  "</div>" +
                   "</div>").html_safe
          end
 
